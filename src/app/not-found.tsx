@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import LinkButton from '@/components/LinkButton'
 
 export default function NotFound() {
   return (
@@ -12,12 +12,7 @@ export default function NotFound() {
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Link
-            href="/"
-            className="hover:bg-grey-100 rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
-          >
-            Go back home
-          </Link>
+          <LinkButton href="/">Go back home</LinkButton>
         </div>
       </div>
     </div>

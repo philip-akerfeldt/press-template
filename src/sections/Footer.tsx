@@ -134,22 +134,22 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900">
+    <footer>
       <div className="mx-auto max-w-2xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <div className="mt-16 flex justify-center gap-x-10">
           {navigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+            <a key={item.name} href={item.href} className="social-icon">
               <span className="sr-only">{item.name}</span>
               <item.icon aria-hidden="true" className="size-6" />
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-sm/6 text-gray-400">
+        <p className="subtitle mt-10 text-center text-sm/6">
           The content and media on this site may be used for editorial and commercial purposes.
           Usage is permitted at your own risk and responsibility. Corporate Potato assumes no
           liability for third-party use.
         </p>
-        <p className="mt-10 text-center text-sm/6 text-gray-400">
+        <p className="subtitle mt-10 text-center text-sm/6">
           &copy; 2025 Temporary Corporation. All rights reserved.
         </p>
       </div>

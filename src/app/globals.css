@@ -2,30 +2,54 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #101828;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-dm-serif-display);
+  --font-mono: var(--font-dm-serif-display);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #101828;
     --foreground: #ededed;
+  }
+}
+
+@layer components {
+  .social-icon {
+    @apply text-gray-400 hover:text-gray-300;
+  }
+
+  .subtitle {
+    @apply text-gray-400;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  @apply flex max-h-dvh min-h-dvh flex-col antialiased;
+  font-family: var(--font-dm-serif-display);
+  @apply flex max-h-dvh min-h-dvh flex-col text-pretty antialiased;
 }
 
 main {
-  @apply h-dvh flex-auto bg-gray-900;
+  @apply h-full flex-auto bg-gray-900;
+}
+
+footer {
+  @apply bg-gray-900;
+}
+
+h1,
+h2,
+h3 {
+  @apply text-4xl font-semibold tracking-tight text-pretty sm:text-5xl lg:text-balance;
+}
+
+p {
+  @apply text-pretty;
 }

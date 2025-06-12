@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'Fact Sheet', href: '#', current: false },
   { name: 'Trailer', href: '#', current: false },
-  { name: 'features', href: '#', current: false },
+  { name: 'Features', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
   { name: 'About', href: '#', current: false },
   { name: 'Contact', href: '#', current: false },
@@ -47,7 +47,7 @@ export default function Header() {
                       item.current
                         ? 'bg-gray-900 text-white'
                         : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium'
+                      'px-3 py-2 text-sm font-medium'
                     )}
                   >
                     {item.name}
@@ -71,7 +71,7 @@ export default function Header() {
                 item.current
                   ? 'bg-gray-900 text-white'
                   : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium'
+                'block px-3 py-2 text-base font-medium'
               )}
             >
               {item.name}

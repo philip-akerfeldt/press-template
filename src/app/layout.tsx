@@ -16,9 +16,13 @@ const dm_serif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: {
     template: '%s | Press Kit',
-    default: 'Product Name'
+    default: 'Product'
   },
-  description: 'We need a description here'
+  description: 'Generic description for the product press kit.',
+  robots: {
+    index: false,
+    follow: false
+  }
 }
 
 export default async function RootLayout({
@@ -30,7 +34,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={dm_serif.variable}>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
